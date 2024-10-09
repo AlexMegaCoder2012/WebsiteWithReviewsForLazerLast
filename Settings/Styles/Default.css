@@ -1,0 +1,297 @@
+body {
+    background-color: black;
+}
+
+#Background_site {
+    top: 0;
+    left: 0;
+    margin-bottom: 0;
+}
+
+#img_main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.workspace {
+    box-shadow: 0 0 25px 5px;
+    position: sticky;
+    background-color: #DFDFDF;
+    margin-left: 10%;
+    width: 80%;
+    margin-right: 10%;
+    padding-bottom: 1px;
+}
+
+.title_page {
+    border-bottom-style: solid;
+	border-bottom-color: darkorange;
+	border-bottom-width: 2px;
+    box-shadow: 0 8px 4px -4px rgba(0, 0, 0, .3);
+}
+
+#donate_reviews {
+    font-family: Impact;
+    font-style: oblique;
+    background: linear-gradient(orange, brown);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+}
+
+.Content {
+    width: 92%;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.UsersReview {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    border-style: solid;
+	border-color: darkorange;
+	border-width: 1px;
+    box-shadow: 0 0 8px 1px;
+}
+
+#Nick {
+    margin-top: 0;
+    padding-top: 0.5%;
+    padding-left: 1%;
+    padding-bottom: 0.5%;
+    background: linear-gradient(orange, brown);
+    color: white;
+    border-bottom-style: solid;
+    border-bottom-color: darkorange;
+    border-bottom-width: 1px;
+    box-shadow: 0 8px 4px -4px rgba(0, 0, 0, .3);
+}
+
+.form_review {
+    margin-bottom: 3%;;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#PlaceEnterReview {
+    box-shadow: 0 0 8px 1px;
+    border-style: solid;
+	border-color: darkorange;
+	border-width: 1px;
+}
+
+#Text_review {
+    margin-top: 10px;
+    border: none;
+    resize: none;
+    width: 70%;
+    height: 95px;
+    margin-left: 5%;
+    box-shadow: 0 0 5px 1px;
+}
+
+#link_area {
+    color: green;
+}
+
+#Numchar {
+    margin-top: 5px;
+    width: 70%;
+    margin-left: 5%;
+}
+
+.Text {
+    margin-left: 1%;
+}
+
+text {
+    float: left;
+}
+
+#Send {
+    float: bottom;
+    padding: 10px;
+    background-color: green;
+    font-size: 16px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 5px 1px black;
+    transition: transform .2s;
+}
+
+button:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+a {
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+a:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+ /* свойства модального окна по умолчанию */
+.modal {
+	position: fixed;
+	/* фиксированное положение */
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	/* цвет фона */
+	z-index: 1050;
+	opacity: 0;
+	/* по умолчанию модальное окно прозрачно */
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	/* анимация перехода */
+	pointer-events: none;
+	/* элемент невидим для событий мыши */
+}
+
+/* при отображении модального окно */
+.modal:target {
+	opacity: 1;
+	pointer-events: auto;
+	overflow-y: auto;
+}
+
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+	position: relative;
+	width: auto;
+	margin: 250px;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 500px;
+    margin: 30px auto;
+  }
+}
+
+/* свойства для блока, содержащего контент модального окна */
+.modal-content {
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	background-color: #fff;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border: 1px solid rgba(0, 0, 0, .2);
+	border-radius: .3rem;
+	outline: 0;
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  }
+}
+
+/* свойства для заголовка модального окна */
+.modal-header {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	 -webkit-box-align: center;
+	 -webkit-align-items: center;
+	 -ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: 5px;
+	border-bottom: 1px solid #eceeef;
+}
+
+/* свойства для кнопки "Закрыть" */
+.close {
+	float: right;
+	float: top;
+	font-family: sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1;
+	color: #000;
+	text-shadow: 0 1px 0 #fff;
+	opacity: .5;
+	text-decoration: none;
+}
+	
+#Enter {
+	height: 180px;
+	width: 230px;
+	margin: 0 auto;
+}
+
+input {
+	font-size: 18px;
+	margin: 2px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	border-bottom-width: 2px;
+}
+
+#confirm {
+	margin-top: 10px;
+	padding: 10px;
+	border: none;
+	background-color: green;
+	font-size: 16px;
+	color: white;
+}
+
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus,
+	.close:hover {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+		opacity: .75;
+}
+
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+	position: relative;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 auto;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	overflow: auto;
+}
